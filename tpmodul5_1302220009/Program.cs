@@ -1,15 +1,26 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace tpmodul5_1302220009
+class Program
 {
-    internal class Program
+    public class DataGeneric<T>
     {
-        static void Main(string[] args)
+        T data;
+        public DataGeneric(T data)
         {
+            this.data = data;
         }
+
+        public void PrintData()
+        {
+            Console.WriteLine("Data yang tersimpan adalah: " + data);
+        }
+    }
+
+    static void Main(string[] args)
+    {
+        Console.WriteLine();
+        DataGeneric<string> dataObj = new DataGeneric<string>("1302220009");
+        dataObj.PrintData();
+        Console.ReadLine();
     }
 }
